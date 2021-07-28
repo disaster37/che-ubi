@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Check if use default path or not
-if [ -z "$1" ]; then
+if [ ! -z "$1" ]; then
     EXTRA_CERTICATE_PATH=$1
 else
     EXTRA_CERTICATE_PATH=/public-certs
