@@ -20,6 +20,7 @@ RUN \
 # Add entrypoint to load custom pki certificates
 # Default store is /public-certs
 COPY che-entrypoint.sh /che-entrypoint.sh
+RUN chmod +x /che-entrypoint.sh
 ENTRYPOINT /che-entrypoint.sh
 
 
