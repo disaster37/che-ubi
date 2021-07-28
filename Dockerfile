@@ -1,16 +1,14 @@
 
 FROM redhat/ubi8-minimal:8.4
 
-ENV \
-    GID=1724 \
+ENV GID=1724 \
     UID=1724 \
     GROUP=theia \
     USER=theia \
-    HOME=/home/theia \
+    HOME=/home/theia
 
 # Add some standard tools
-RUN \
-    microdnf install -y sudo git wget curl ca-certificates zip vim make bash tar gzip
+RUN microdnf install -y sudo git wget curl ca-certificates zip vim make bash tar gzip
 
 # Create user for che and set sudoer profile
 RUN \
